@@ -4,12 +4,12 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 import streamlit as st
+from app import main
+
 
 st.set_page_config(page_title="AirBnB data", page_icon="🌍")
 
 st.sidebar.header("AirBnB data")
-
-
 st.title('Airbnb listings in Copenhagen')
 
 
@@ -143,3 +143,6 @@ if classifications:
 clustering = st.button("Look at clustering examples")
 if classifications:
     switch_page('clustering')
+
+if __name__ == "__main__":
+    main()
