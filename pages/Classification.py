@@ -10,7 +10,6 @@ from sklearn.metrics import confusion_matrix
 import seaborn as sns
 import streamlit as st
 
-st.set_page_config(page_title="AirBnB data", page_icon="🌍")
 
 st.sidebar.header("AirBnB data")
 st.title('Classification for low or high prices')
