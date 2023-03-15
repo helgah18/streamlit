@@ -12,8 +12,6 @@ import streamlit as st
 
 st.sidebar.header("Clustering")
 
-st.set_page_config(page_title='Clustering AirBnB data', page_icon=':boom:', layout='wide')
-
 st.title('Clustering Airbnb listings in Copenhagen')
 
 
