@@ -4,15 +4,10 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 import streamlit as st
-from app import main
 
-
-st.set_page_config(page_title="AirBnB data", page_icon="🌍")
-
+st.set_page_config(page_title="AirBnB data", page_icon=":house:")
 st.sidebar.header("AirBnB data")
 st.title('Airbnb listings in Copenhagen')
-
-
 data = pd.read_csv('listings_CPH.csv')
 
 
@@ -45,11 +40,7 @@ axes[1].set_title("After removing price outliers")
 
 # Add a common title for the figure
 fig.suptitle('Price column')
-
 st.pyplot(fig)
-
-
-
 st.markdown("Outliers are obviously having a significant impact on the data because the later plot clearly depicts the distribution much better. Next it will be investigated whether prices vary between Copenhagen's various neighborhoods.")
 
 
