@@ -72,7 +72,7 @@ CREATE OR REPLACE FILE FORMAT my_csv_format
 # secrets
 st.title('Add username and password to your local app secrets')
 st.write('Your local Streamlit app will read secrets from a file .streamlit/secrets.toml in your app’s root directory. Create this file if it doesn’t exist yet and add your Snowflake username, password, account identifier, and the name of your warehouse, database, and schema as shown below:')
-st.code(' #.streamlit/secrets.toml \n user = "xxx" \n password = "xxx" \n account = "xxx" \n warehouse = "xxx" \n database = "xxx" \n schema = "xxx"')
+st.code(' #.streamlit/secrets.toml \n [snowflake] \n user = "xxx" \n password = "xxx" \n account = "xxx" \n warehouse = "xxx" \n database = "xxx" \n schema = "xxx"')
 st.subheader('Copy your app secrets to the cloud')
 st.write("As the secrets.toml file above is not committed to GitHub, you need to pass its content to your deployed app (on Streamlit Community Cloud) separately. Go to the app dashboard and in the app's dropdown menu, click on Edit Secrets. Copy the content of secrets.toml into the text area.")
 
