@@ -2,22 +2,17 @@
 import numpy as np
 import pandas as pd
 from sklearn.metrics import confusion_matrix, recall_score, accuracy_score, precision_score, f1_score
-
-
-#from matplotlib import colors as mcolors
 from sklearn.cluster import KMeans
 import matplotlib.colors as colors
 from sklearn.datasets import make_classification
 import snowflake.connector 
 import plotly.express as px
 import plotly.colors as pc
-
-
 import streamlit as st
-
 
 st.sidebar.header("Clustering")
 
+st.set_page_config(page_title='Clustering AirBnB data', page_icon=':boom:', layout='wide')
 
 st.title('Clustering Airbnb listings in Copenhagen')
 
@@ -98,5 +93,7 @@ if cluster_col:
     st.subheader('Clustering')
     st.write('Cluster by: ' + ', '.join(cluster_col))
     st.plotly_chart(fig)
+
+    
 
     
