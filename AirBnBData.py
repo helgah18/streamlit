@@ -135,5 +135,3 @@ clustering = st.button("Look at clustering examples")
 if classifications:
     switch_page('clustering')
 
-if __name__ == "__main__":
-    main()
