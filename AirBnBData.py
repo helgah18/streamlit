@@ -138,8 +138,8 @@ def switch_page(page_name: str):
 
 classifications = st.button("Look at classification examples")
 if classifications:
-    switch_page('Classification')
+    switch_page('classification')
 
 clustering = st.button("Look at clustering examples")
 if clustering:
-    switch_page('Clustering')
+    switch_page('clustering')
