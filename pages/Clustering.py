@@ -54,8 +54,8 @@ cluster_col = st.multiselect(
     "Pick the columns you want to cluster by",
     cols)
 
-number = st.number_input('Input number of clusters')
-st.write('The current number is ')
+number = st.number_input('Input number of clusters', min_value=1, max_value=10, value=5, step=1)
+st.write('The current number is ', number)
 
 #data = pd.get_dummies(data, columns=['NEIGHBOURHOOD', 'ROOM_TYPE'])
 
@@ -67,7 +67,6 @@ st.write('The current number is ')
 
 
 if cluster_col: 
-    number = 5
         # Generate a list of colors with length equal to the number of clusters
     colors = pc.qualitative.Plotly * ((number // len(pc.qualitative.Plotly)) + 1)
 
